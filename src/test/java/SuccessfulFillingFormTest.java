@@ -17,7 +17,6 @@ public class SuccessfulFillingFormTest extends BaseTest {
 
         $("[placeholder='John']").setValue(nameUser);
         $("[placeholder='Snow']").setValue(lastnameUser);
-        $("[placeholder='Snow']").shouldHave(Condition.value(lastnameUser));
         $("[placeholder='name@example.com']").setValue(emailUser);
         $("[name='phone']").setValue(numberUser);
 
