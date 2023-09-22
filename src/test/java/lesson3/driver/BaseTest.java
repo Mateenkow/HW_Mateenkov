@@ -1,4 +1,4 @@
-package HW3.driver;
+package lesson3.driver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

@@ -1,16 +1,12 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import HW3.driver.BaseTest;
+import lesson3.driver.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static HW3.constants.DataConstants.*;
+import static lesson3.constants.DataConstants.*;
 
 public class SuccessfulFillingFormTest extends BaseTest {
 
@@ -21,13 +17,14 @@ public class SuccessfulFillingFormTest extends BaseTest {
 
         $("[placeholder='John']").setValue(nameUser);
         $("[placeholder='Snow']").setValue(lastnameUser);
+        $("[placeholder='Snow']").shouldHave(Condition.value(lastnameUser));
         $("[placeholder='name@example.com']").setValue(emailUser);
         $("[name='phone']").setValue(numberUser);
 
         $x("//label[text() = 'Language']/parent::div").click();
         $("[data-value='Russian']").click();
 
-//        $("[data-testid='CalendarIcon']").click(); Не смогу разобраться
+//        $("[data-testid='CalendarIcon']").click(); Не смог разобраться
 
         $("[value='Male']").click();
         $("[value='Music']").click();

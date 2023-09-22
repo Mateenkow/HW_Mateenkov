@@ -1,4 +1,4 @@
-package HW3.constants;
+package lesson3.constants;
 
 public class DataConstants{
     public static final String urlForm = "https://app.qa.guru/automation-practice-form/";
