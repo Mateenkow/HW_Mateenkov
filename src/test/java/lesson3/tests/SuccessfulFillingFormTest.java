@@ -1,3 +1,5 @@
+package lesson3.tests;
+
 import com.codeborne.selenide.Condition;
 import lesson3.driver.BaseTest;
 import org.junit.jupiter.api.Assertions;
