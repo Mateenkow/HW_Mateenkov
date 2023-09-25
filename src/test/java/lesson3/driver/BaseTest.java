@@ -11,7 +11,6 @@ abstract public class BaseTest {
     public void setUp() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x2080";
     }
 
     @AfterEach
