@@ -60,7 +60,7 @@ public class SelenideWikiTest {
                 "  }\n" +
                 "}"));
 
-        $(byText("Or register extension inside test class:")).shouldBe(Condition.visible);
+        $(".markdown-body").shouldHave(Condition.text("Or register extension inside test class:"));
         $(".markdown-body").shouldHave(Condition.text("class Tests {\n" +
                 "  @RegisterExtension \n" +
                 "  static SoftAssertsExtension softAsserts = new SoftAssertsExtension();\n" +
