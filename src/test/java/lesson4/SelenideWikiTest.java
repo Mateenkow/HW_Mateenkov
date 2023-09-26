@@ -7,7 +7,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
@@ -60,7 +59,7 @@ public class SelenideWikiTest {
                 "  }\n" +
                 "}"));
 
-        $(byText("Or register extension inside test class:")).shouldBe(Condition.visible);
+        $(".markdown-body").shouldHave(Condition.text("Or register extension inside test class:"));
         $(".markdown-body").shouldHave(Condition.text("class Tests {\n" +
                 "  @RegisterExtension \n" +
                 "  static SoftAssertsExtension softAsserts = new SoftAssertsExtension();\n" +
@@ -74,7 +73,6 @@ public class SelenideWikiTest {
                 "    $(\"#second\").should(visible).click();\n" +
                 "  }\n" +
                 "}"));
-
     }
 
     @AfterEach
