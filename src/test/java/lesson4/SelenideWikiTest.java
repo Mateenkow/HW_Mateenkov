@@ -74,7 +74,6 @@ public class SelenideWikiTest {
                 "    $(\"#second\").should(visible).click();\n" +
                 "  }\n" +
                 "}"));
-
     }
 
     @AfterEach
