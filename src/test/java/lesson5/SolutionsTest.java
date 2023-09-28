@@ -24,7 +24,7 @@ public class SolutionsTest {
 
     @Test
     void solutionsTest() {
-        open("/");
+        open("");
 
         $(byTagAndText("button", "Solutions")).hover();
 

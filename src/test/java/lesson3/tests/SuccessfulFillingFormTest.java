@@ -1,14 +1,14 @@
 package lesson3.tests;
 
 import com.codeborne.selenide.Condition;
-import lesson3.driver.BaseTest;
+import driver.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static lesson3.constants.DataConstants.*;
+import static constants.DataConstants.*;
 
 public class SuccessfulFillingFormTest extends BaseTest {
 
@@ -20,7 +20,7 @@ public class SuccessfulFillingFormTest extends BaseTest {
         $("[placeholder='John']").setValue(nameUser);
         $("[placeholder='Snow']").setValue(lastnameUser);
         $("[placeholder='name@example.com']").setValue(emailUser);
-        $("[name='phone']").setValue(numberUser);
+        $("[name='phone']").setValue("2053454545");
 
         $x("//label[text() = 'Language']/parent::div").click();
         $("[data-value='Russian']").click();

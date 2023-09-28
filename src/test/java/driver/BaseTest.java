@@ -1,4 +1,4 @@
-package lesson3.driver;
+package driver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -11,6 +11,7 @@ abstract public class BaseTest {
     public void setUp() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = "1920x1080";
     }
 
     @AfterEach

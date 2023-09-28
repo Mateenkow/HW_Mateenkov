@@ -1,10 +1,10 @@
-package lesson3.constants;
+package constants;
 
 public class DataConstants{
     public static final String urlForm = "https://app.qa.guru/automation-practice-form/";
     public static final String nameUser = "Ilya";
     public static final String lastnameUser = "Mateenkov";
-    public static final String numberUser = "2053454545";
+    public static final String numberUser = "8920317050";
     public static final String emailUser = "imateenkow@gmail.com";
     public static final String month = "August";
     public static final String year = "1998";
