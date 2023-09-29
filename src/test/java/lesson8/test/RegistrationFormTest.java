@@ -1,12 +1,10 @@
 package lesson8.test;
 
-import com.codeborne.selenide.Condition;
+
 import driver.BaseTest;
 import lesson8.pages.RegistrationFormPage;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
 import static constants.DataConstants.*;
 
 /**
@@ -18,12 +16,13 @@ public class RegistrationFormTest extends BaseTest {
 
     @Test
     void registrationFormTest() {
-        registrationFormPage.openPage()
-                .setFirstName(nameUser)
-                .setLastName(lastnameUser)
+        registrationFormPage.openPage("Student Registration Form")
+                .removeBanner()
+                .setFirstName(NAME_USER)
+                .setLastName(LASTNAME_USER)
                 .setGender()
-                .setEmailUser(emailUser)
-                .setNumberPhone(numberUser)
+                .setEmailUser(EMAIL_USER)
+                .setNumberPhone(NUMBER_USER)
                 .setDateBirth("18", "August", "1998")
                 .setSubject("Physics")
                 .setHobbies("Reading")

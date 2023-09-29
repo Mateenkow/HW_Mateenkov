@@ -1,13 +1,10 @@
 package constants;
 
 public class DataConstants{
-    public static final String urlForm = "https://app.qa.guru/automation-practice-form/";
-    public static final String nameUser = "Ilya";
-    public static final String lastnameUser = "Mateenkov";
-    public static final String numberUser = "8920317050";
-    public static final String emailUser = "imateenkow@gmail.com";
-    public static final String month = "August";
-    public static final String year = "1998";
-    public static final String subjects = "QA_Guru";
-    public static final String address = "Some Address";
+    public static final String URL_FORM = "https://app.qa.guru/automation-practice-form/";
+    public static final String NAME_USER = "Ilya";
+    public static final String LASTNAME_USER = "Mateenkov";
+    public static final String NUMBER_USER = "8920317050";
+    public static final String EMAIL_USER = "imateenkow@gmail.com";
+    public static final String ADDRESS = "Some Address";
 }

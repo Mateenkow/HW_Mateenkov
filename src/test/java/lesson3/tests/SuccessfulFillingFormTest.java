@@ -14,12 +14,12 @@ public class SuccessfulFillingFormTest extends BaseTest {
 
     @Test
     public void successFillFormTest() {
-        open(urlForm);
-        Assertions.assertTrue(url().contains(urlForm));
+        open(URL_FORM);
+        Assertions.assertTrue(url().contains(URL_FORM));
 
-        $("[placeholder='John']").setValue(nameUser);
-        $("[placeholder='Snow']").setValue(lastnameUser);
-        $("[placeholder='name@example.com']").setValue(emailUser);
+        $("[placeholder='John']").setValue(NAME_USER);
+        $("[placeholder='Snow']").setValue(LASTNAME_USER);
+        $("[placeholder='name@example.com']").setValue(EMAIL_USER);
         $("[name='phone']").setValue("2053454545");
 
         $x("//label[text() = 'Language']/parent::div").click();
@@ -43,22 +43,22 @@ public class SuccessfulFillingFormTest extends BaseTest {
 
         $(".MuiSlider-thumb").lastChild().setValue("50");
 
-        $("[style='height: 84px; overflow: hidden;']").setValue(address);
+        $("[style='height: 84px; overflow: hidden;']").setValue(ADDRESS);
 
 //        $("[type='file']").uploadFromClasspath("207.png"); Не смог разобраться
 
         $("[type='submit']").scrollTo().click();
 
         $x("//h4[text() = 'Thank you for submitting the form']").scrollTo().shouldBe(Condition.visible);
-        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(nameUser));
-        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(lastnameUser));
-        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(emailUser));
+        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(NAME_USER));
+        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(LASTNAME_USER));
+        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(EMAIL_USER));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("Male"));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("+1 205 345 4545"));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("Music"));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("Music, Sports"));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("50"));
         $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text("Russian"));
-        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(address));
+        $x("//h4[text() = 'Thank you for submitting the form']/parent::div").shouldBe(text(ADDRESS));
     }
 }

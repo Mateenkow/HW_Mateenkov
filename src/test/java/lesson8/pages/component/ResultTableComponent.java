@@ -1,7 +1,6 @@
 package lesson8.pages.component;
 
 import com.codeborne.selenide.Condition;
-import lesson8.pages.RegistrationFormPage;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;

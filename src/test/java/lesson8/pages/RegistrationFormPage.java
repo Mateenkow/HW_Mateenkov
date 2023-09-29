@@ -36,9 +36,13 @@ public class RegistrationFormPage {
 
         return this;
     }
-    public RegistrationFormPage openPage() {
+    public RegistrationFormPage openPage(String title) {
         open("/automation-practice-form");
-        titleForm.shouldHave(Condition.text("Student Registration Form"));
+        titleForm.shouldHave(Condition.text(title));
+
+        return this;
+    }
+    public RegistrationFormPage removeBanner() {
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
